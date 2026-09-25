@@ -9,126 +9,138 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      line-height: 1.7;
       background: #f9f9f9;
       color: #333;
+      line-height: 1.7;
     }
 
     /* ===== Hero Banner ===== */
     header.hero {
-     background: linear-gradient(135deg, #003366 40%, #cc0000 100%),
-            url('hero-banner.jpg') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(0,51,102,0.85), rgba(204,0,0,0.85)),
+                  url('hero-banner.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 10vh 2rem;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
     header.hero h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 1rem;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     }
     header.hero p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       max-width: 700px;
       margin: 0 auto 2rem;
     }
     header.hero .btn {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      background: #cc0000;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      display:inline-block;
+      margin:0.5rem;
+      padding:1rem 2rem;
+      border-radius:50px;
+      background:#cc0000;
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      transition:all 0.3s ease;
     }
     header.hero .btn:hover {
-      background: #990000;
-      transform: scale(1.05);
+      background:#990000;
+      transform:scale(1.05);
     }
 
     /* ===== Navigation ===== */
     nav {
-      background: #003366;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      position: relative;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-    nav li {
-      position: relative;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem;
-      display: block;
-    }
-    nav a:hover {
-      color: #cc0000;
-    }
-
-    /* ===== Dropdowns ===== */
-    nav ul ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #003366;
-      padding: 0.5rem 0;
-      border-radius: 6px;
-      min-width: 200px;
+      background:#003366;
+      border-radius: 0 0 20px 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-    nav ul ul li {
-      width: 100%;
+    nav ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      gap:2rem;
+      padding:1rem;
+      margin:0;
+      flex-wrap:wrap;
     }
+    nav li { position:relative; }
+    nav a {
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      font-size:1.1rem;
+      padding:0.5rem;
+      display:block;
+    }
+    nav a:hover { color:#cc0000; }
+
+    /* Dropdowns */
+    nav ul ul {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background:white;
+      padding:0.5rem 0;
+      border-radius:12px;
+      min-width:220px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.25);
+      z-index:1000;
+    }
+    nav ul ul li { width:100%; }
     nav ul ul a {
-      padding: 0.5rem 1rem;
+      color:#003366;
+      padding:0.7rem 1rem;
+      font-size:1rem;
     }
-    nav li:hover > ul {
-      display: block;
-    }
+    nav ul ul a:hover { color:#cc0000; }
+    nav li:hover > ul { display:block; }
 
     /* ===== Main Content ===== */
     main {
-      text-align: center;
-      padding: 3rem 1rem;
+      text-align:center;
+      padding:4rem 1rem;
     }
     main p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      font-size:1.2rem;
+      margin-bottom:2rem;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
     }
     .btn {
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      background: #cc0000;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      display:inline-block;
+      margin:1rem;
+      padding:1rem 2rem;
+      border-radius:50px;
+      background:#cc0000;
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      transition:all 0.3s ease;
     }
-    .btn:hover {
-      background: #990000;
-      transform: scale(1.05);
-    }
+    .btn:hover { background:#990000; transform:scale(1.05); }
 
     /* ===== Footer ===== */
     footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+      background:#003366;
+      color:white;
+      text-align:center;
+      padding:1.5rem;
+      border-top-left-radius:20px;
+      border-top-right-radius:20px;
+      margin-top:3rem;
+    }
+
+    /* ===== Mobile Friendly ===== */
+    @media (max-width:768px) {
+      header.hero h1 { font-size:2.2rem; }
+      header.hero p { font-size:1.1rem; }
+      nav ul { flex-direction:column; align-items:center; }
+      nav ul ul { position:static; box-shadow:none; border-radius:0; }
     }
   </style>
 </head>
@@ -142,7 +154,7 @@
     <a href="contact/faq.html" class="btn">Get in Touch</a>
   </header>
 
-  <!-- Main Navigation -->
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="blog.html">Blog</a></li>
@@ -153,10 +165,7 @@
           <li><a href="about/finance.html">Finance</a></li>
           <li><a href="about/partners.html">Partners</a></li>
           <li><a href="about/people/leadership.html">Leadership</a></li>
-          <li><a href="about/people/experts.html">Experts</a></li>
-          <li><a href="about/people/organigram/organizational-chart.html">Organizational Chart</a></li>
           <li><a href="about/worldwide-offices.html">Worldwide Offices</a></li>
-          <li><a href="about/oversight-advisory-committee.html">Oversight Advisory Committee</a></li>
         </ul>
       </li>
       <li><a href="careers.html">Careers</a></li>
