@@ -3,125 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advisory&Monitoring</title>
+  <title>United Advisory Programme</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.7;
       background: #f9f9f9;
       color: #333;
     }
-    h1, h2 { font-weight: 600; }
-    header {
-      background: #003366; color: white;
-      padding: 1rem 2rem; text-align: center;
+
+    /* ===== Hero Banner ===== */
+    header.hero {
+      background: linear-gradient(rgba(0,51,102,0.85), rgba(204,0,0,0.85)),
+                  url('hero-banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
     }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; }
-    .section {
-      max-width: 1200px; margin: 2rem auto; padding: 0 1rem;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+    header.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     }
-    .card {
-      background: white; border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 1.5rem;
+    header.hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
-    .card h2 { margin-bottom: 1rem; color: #003366; border-bottom: 3px solid #cc0000; display: inline-block; }
-    .card ul { list-style: none; padding-left: 0; }
-    .card li { margin: 0.3rem 0; }
-    .card a {
-      color: #003366; text-decoration: none; font-weight: 500;
+    header.hero .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      background: #cc0000;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
-    .card a:hover { color: #cc0000; text-decoration: underline; }
+    header.hero .btn:hover {
+      background: #990000;
+      transform: scale(1.05);
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #003366;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: relative;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem;
+      display: block;
+    }
+    nav a:hover {
+      color: #cc0000;
+    }
+
+    /* ===== Dropdowns ===== */
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #003366;
+      padding: 0.5rem 0;
+      border-radius: 6px;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    nav ul ul li {
+      width: 100%;
+    }
+    nav ul ul a {
+      padding: 0.5rem 1rem;
+    }
+    nav li:hover > ul {
+      display: block;
+    }
+
+    /* ===== Main Content ===== */
+    main {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      background: #cc0000;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #990000;
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
     footer {
-      background: #003366; color: white;
-      text-align: center; padding: 1rem; margin-top: 2rem;
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header>
-    <h1>Advisory&Monitoring</h1>
-    <p>Advisory, climate action, and global collaboration</p>
+  <!-- Hero Banner -->
+  <header class="hero">
+    <h1>United Advisory Programme</h1>
+    <p>Advisory, climate action, and global collaboration — join us in shaping the future.</p>
+    <a href="about/vision.html" class="btn">Discover More</a>
+    <a href="contact/faq.html" class="btn">Get in Touch</a>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="section">
-
-      <!-- About -->
-      <div class="card">
-        <h2>About</h2>
+  <!-- Main Navigation -->
+  <nav>
+    <ul>
+      <li><a href="blog.html">Blog</a></li>
+      <li>
+        <a href="about/vision.html">About</a>
         <ul>
-          <li><a href="about/vision.html">Vision</a></li>
           <li><a href="about/history.html">History</a></li>
           <li><a href="about/finance.html">Finance</a></li>
           <li><a href="about/partners.html">Partners</a></li>
           <li><a href="about/people/leadership.html">Leadership</a></li>
           <li><a href="about/people/experts.html">Experts</a></li>
           <li><a href="about/people/organigram/organizational-chart.html">Organizational Chart</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-evaluation-oed.html">Office Evaluation (OED)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-strategy-programme-budget-osp.html">Office Strategy & Programme Budget (OSP)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/legal-office-leg.html">Legal Office (LEG)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/ethics-office-eth.html">Ethics Office (ETH)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-sdgs-osg.html">Office SDGs (OSG)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-communications-occ.html">Office Communications (OCC)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-innovation-oin.html">Office Innovation (OIN)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-sids-ldcs-lldcs-osl.html">Office SIDS/LDCs/LLDCs (OSL)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-climate-change-ocb.html">Office Climate Change (OCB)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-youth-women-oym.html">Office Youth & Women (OYM)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/office-investments-oissd.html">Office Investments (OISSD)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/partnership-collaboration-psu.html">Partnership Collaboration (PSU)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/rural-transformation-esp.html">Rural Transformation (ESP)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/south-south-cooperation-pst.html">South-South Cooperation (PST)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/project-support-pss.html">Project Support (PSS)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/economics-policy-esa.html">Economics Policy (ESA)</a></li>
-          <li><a href="about/people/organigram/governing-bodies/markets-trade-est.html">Markets & Trade (EST)</a></li>
-          <li><a href="about/logistics-support/human-resources-csh.html">Human Resources (CSH)</a></li>
-          <li><a href="about/logistics-support/finance-csf.html">Finance (CSF)</a></li>
-          <li><a href="about/logistics-support/digital-division-dd.html">Digital Division (DD)</a></li>
           <li><a href="about/worldwide-offices.html">Worldwide Offices</a></li>
           <li><a href="about/oversight-advisory-committee.html">Oversight Advisory Committee</a></li>
         </ul>
-      </div>
-
-      <!-- Transparency -->
-      <div class="card">
-        <h2>Transparency</h2>
+      </li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="where-we-work/asia-pacific.html">Where we work</a></li>
+      <li><a href="how-we-work/people-centred.html">How we work</a></li>
+      <li>
+        <a href="transparency/evaluation.html">Transparency</a>
         <ul>
           <li><a href="transparency/ethics.html">Ethics</a></li>
           <li><a href="transparency/audit-oversight.html">Audit Oversight</a></li>
-          <li><a href="transparency/evaluation.html">Evaluation</a></li>
           <li><a href="transparency/climate-assessment.html">Climate Assessment</a></li>
           <li><a href="transparency/procurement.html">Procurement</a></li>
           <li><a href="transparency/dashboards.html">Dashboards</a></li>
         </ul>
-      </div>
+      </li>
+    </ul>
+  </nav>
 
-      <!-- How we work -->
-      <div class="card">
-        <h2>How we work</h2>
-        <ul>
-          <li><a href="how-we-work/people-centred.html">People-centred</a></li>
-          <li><a href="how-we-work/managing-results.html">Managing Results</a></li>
-          <li><a href="how-we-work/industry-systems.html">Industry Systems</a></li>
-          <li><a href="how-we-work/transformative-policies.html">Transformative Policies</a></li>
-          <li><a href="how-we-work/innovation.html">Innovation</a></li>
-          <li><a href="how-we-work/south-south-cooperation.html">South-South Cooperation</a></li>
-        </ul>
-      </div>
+  <!-- Main Content -->
+  <main>
+    <p>Welcome to our portal. Explore our initiatives, learn about our mission, and see how we work across regions and sectors.</p>
+    <a href="knowledge/reports.html" class="btn">Explore Publications</a>
+  </main>
 
-      <!-- Where we work -->
-      <div class="card">
-        <h2>Where we work</h2>
-        <ul>
-          <li><a href="where-we-work/asia-pacific.html">Asia-Pacific</a></li>
-          <li><a href="where-we-work/east-southern-africa.html">East & Southern Africa</a></li>
-          <li><a href="where-we-work/latin-america.html">Latin America</a></li>
-          <li><a href="where-we-work/west-central-africa.html">West & Central Africa</a></li>
-          <li><a href="where-we-work/near-east-north-africa.html">Near East &
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 United Advisory Programme</p>
+  </footer>
+
+</body>
+</html>
