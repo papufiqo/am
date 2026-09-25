@@ -1,9 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Finance and Funding | AdanelaMusaraj.eu</title></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Worldwide Offices | AdanelaMusaraj.eu</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      background: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #003366; /* deep blue */
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #cc0000; /* red accent underline */
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    a {
+      color: #cc0000; /* red links */
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #0055aa; /* blue hover */
+      text-decoration: underline;
+    }
+
+    /* Card-style container */
+    .content {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    /* Button style for link */
+    .btn {
+      display: inline-block;
+      background: #cc0000;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #990000;
+    }
+  </style>
+</head>
 <body>
-    <h1>Finance and Funding</h1>
-    <p>This is the finance page. The site navigation and layout would be loaded here.</p>
-    <p><a href="../index.html">Back to Home</a></p>
+  <div class="content">
+    <h1>Finance Section – Description</h1>
+    <p>
+The Finance Section is responsible for the financial monitoring, evaluation, and compliance oversight of programs and projects receiving financial support from the European Union, the European Central Bank (ECB), and the European Bank for Reconstruction and Development (EBRD).
+ </p>
+ <p>
+<h2>Core Functions – Description</h2>:
+Financial Monitoring – Track disbursement schedules, budget execution, and cash-flow performance across all supported programs and projects. Maintain real-time visibility of fund utilisation against approved budgets and reporting deadlines.
+Performance Evaluation – Conduct ex-ante, mid-term, and ex-post evaluations of project outcomes, measuring progress against agreed indicators (transition impact, additionality, sustainability, and EU added value) in line with each funder's evaluation frameworks.
+Compliance & Reporting – Ensure adherence to the financial rules governing each funding instrument (EU Financial Regulation, ECB supervisory/programme conditions, EBRD Environmental & Social Policy and loan covenants). Prepare and submit periodic financial and joint activity reports to managing authorities, the European Commission, the ECB, and the EBRD as required.
+Risk & Control – Identify and mitigate financial risks (budget overruns, cost-eligibility gaps, FX exposure, audit findings). Support internal and external audits, including on-the-spot checks and ROM (Risk, Opportunities, Missions) reviews.
+Data & Analytics – Consolidate financial data across portfolios, produce dashboards and analytical notes for management and the Board, and feed lessons learned into future project design and resource allocation.
+    </p>
+    <p>
+Key Outputs:
+-Periodic financial status reports and payment requests
+-Mid-term and ex-post evaluation reports
+-Compliance checklists and audit-ready documentation files
+-Portfolio-level performance dashboards (budget vs. actual, disbursement rates, KPI tracking)
+-Recommendations for corrective action and policy feedback to funders
+    </p>
+    <p><a href="../../../index.html" class="btn">Back to Home</a></p>
+  </div>
 </body>
 </html>
