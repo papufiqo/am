@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advisory & Monitoring</title>
   <style>
-    body { font-family: 'Poppins', Tahoma; margin:0; background:#fff; color:#333; }
+    body { font-family: Tahoma, sans-serif; margin:0; background:#fff; color:#333; }
 
-   /* Header Bar */
+    /* Header Bar */
     .topbar {
       background:#003366;
       color:white;
@@ -21,12 +21,14 @@
 
     /* Hero Section */
     .hero {
-      text-align:center;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
       padding:5rem 2rem;
       background:#f9f9f9;
     }
     .hero h2 {
-      font-size:2.5rem;
+      font-size:3rem;
       margin-bottom:1rem;
       color:#003366;
       border-bottom:4px solid #cc0000;
@@ -34,21 +36,11 @@
       padding-bottom:0.3rem;
     }
     .hero p {
-      font-size:1.2rem;
-      max-width:700px;
+      font-size:1.4rem;
+      text-align: justify;
+      max-width:800px;
       margin:1rem auto 2rem;
     }
-    .hero .btn {
-      background:#cc0000;
-      color:white;
-      padding:0.8rem 1.5rem;
-      margin:0.5rem;
-      text-decoration:none;
-      font-weight:600;
-      border:none;
-      transition:background 0.3s ease;
-    }
-    .hero .btn:hover { background:#990000; }
 
     /* Navigation Bar */
     nav {
@@ -68,6 +60,8 @@
       text-decoration:none;
       font-weight:600;
       font-size:1rem;
+      padding:0.6rem 1rem;
+      border-radius:4px;
     }
     nav a:hover { color:#cc0000; }
     nav ul ul {
@@ -84,12 +78,32 @@
     nav ul ul a:hover { color:#cc0000; }
     nav li:hover > ul { display:block; }
 
+    /* Red buttons inside nav */
+    nav a.nav-btn.red {
+      background:#cc0000;
+      color:white;
+    }
+    nav a.nav-btn.red:hover {
+      background:#990000;
+    }
+
     /* Main Content */
-    main {
-      text-align:justify;
+    .main-content {
+      max-width:900px;
+      margin:0 auto;
+      text-align:center;
       padding:3rem 1rem;
     }
-    main p { font-size:1.1rem; max-width:700px; margin:0 auto 2rem; }
+    .main-content h2 {
+      font-size:2.5rem;
+      margin-bottom:1rem;
+    }
+    .main-content p {
+      font-size:1.3rem;
+      text-align:justify;
+      max-width:800px;
+      margin:0 auto 2rem;
+    }
 
     /* Footer */
     footer {
@@ -118,79 +132,79 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h2>Join us in shaping the future</h2>
-    <p>We strive to become the development partner of choice for you, inspired by democratic principles, helping transform the landscape of comprehensive human development and preserve human dignity.</p>
-    <a href="about/vision.html" class="btn">Discover More</a>
-    <a href="contact/faq.html" class="btn">Get in Touch</a>
+    <h2>Welcome to our portal</h2>
+    <p>
+      Explore how monitoring and advisory experiences support leaders in contributing to change at the individual, institutional, community, and systems levels, and discover which methods and approaches most effectively enable that impact.
+    </p>
   </section>
 
- <!-- Navigation -->
-<nav>
-  <ul>
-    <!-- Red button first -->
-    <li><a href="about/vision.html" class="nav-btn red">Discover More</a></li>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <!-- Red button first -->
+      <li><a href="about/vision.html" class="nav-btn red">Discover More</a></li>
 
-    <!-- Blue nav links -->
-    <li><a href="blog.html">Blog</a></li>
-    <li>
-      <a href="about/vision.html">About</a>
-      <ul>
-        <li><a href="about/vision.html">About Us</a></li>
-        <li><a href="about/people/leadership.html">Structure and leadership</a></li>
-        <li><a href="about/people/organigram/organizational-chart.html">Environment Assembly</a></li>
-        <li><a href="about/partners.html">Committee of Permanent Representatives</a></li>
-        <li><a href="about/partners.html">Secretariats and Conventions</a></li>
-        <li><a href="about/finance.html">Funding and partnerships</a></li>
-        <li><a href="about/finance/transparency/procurement.html">Policies and strategies</a></li>
-        <li><a href="about/finance/transparency/evaluation.html">Evaluation Office</a></li>
-        <li><a href="contact/faq.html">Contact Us</a></li>
-      </ul>
-    </li>
-    <li><a href="careers.html">Careers</a></li>
-    <li>
-      <a href="where-we-work.html">Where we work</a>
-      <ul>
-        <li><a href="where-we-work/east-southern-africa.html">Africa</a></li>
-        <li><a href="where-we-work/asia-pacific.html">Asia and the Pacific</a></li>
-        <li><a href="where-we-work/near-east-north-africa.html">Europe</a></li>
-        <li><a href="where-we-work/latin-america.html">Latin America and the Caribbean</a></li>
-        <li><a href="about/people/organigram/worldwide-offices.html">New York Office</a></li>
-        <li><a href="where-we-work/near-east-north-africa.html">North America</a></li>
-        <li><a href="where-we-work/near-east-north-africa.html">West Asia</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="transparency/evaluation.html">Transparency</a>
-      <ul>
-        <li><a href="transparency/ethics.html">Ethics</a></li>
-        <li><a href="transparency/audit-oversight.html">Audit Oversight</a></li>
-        <li><a href="transparency/climate-assessment.html">Climate Assessment</a></li>
-        <li><a href="transparency/procurement.html">Procurement</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="how-we-work/people-centred.html">How we work</a>
-      <ul>
-        <li><a href="how-we-work/people-centred.html">Ethics</a></li>
-        <li><a href="how-we-work/compliance.html">Compliance with ISO standards</a></li>
-        <li><a href="how-we-work/quality.html">Quality Management Systems</a></li>
-        <li><a href="how-we-work/iso.html">ISO Standards</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="areas-of-work/evaluation.html">Areas of work</a>
-      <ul>
-        <li><a href="areas-of-work/climate-action/cities.html">Climate action</a></li>
-        <li><a href="areas-of-work/nature/biodiversity.html">Nature and land action</a></li>
-        <li><a href="areas-of-work/nature/water.html">Chemicals and pollution action</a></li>
-        <li><a href="areas-of-work/nature/water.html">Air quality</a></li>
-        <li><a href="areas-of-work/nature/biodiversity.html">Biosafety</a></li>
-        <li><a href="areas-of-work/climate-action/digital.html">Digital Transformations</a></li>
-        <li><a href="areas-of-work/climate-action/disasters.html">Disasters and conflicts</a></li>
-        <li><a href="areas-of-work/climate-action/energy.html">Energy</a></li>
-        <li><a href="transparency/climate-assessment.html">Environment under review</a></li>
-        <li><a href="areas-of-work/climate-action/law-governance.html">Environmental law and governance</a></li>
-        <li><a href="areas-of-work/climate-action/extractives.html">Extractives</a></li>
+      <!-- Blue nav links -->
+      <li><a href="blog.html">Blog</a></li>
+      <li>
+        <a href="about/vision.html">About</a>
+        <ul>
+          <li><a href="about/vision.html">About Us</a></li>
+          <li><a href="about/people/leadership.html">Structure and leadership</a></li>
+          <li><a href="about/people/organigram/organizational-chart.html">Environment Assembly</a></li>
+          <li><a href="about/partners.html">Committee of Permanent Representatives</a></li>
+          <li><a href="about/partners.html">Secretariats and Conventions</a></li>
+          <li><a href="about/finance.html">Funding and partnerships</a></li>
+          <li><a href="about/finance/transparency/procurement.html">Policies and strategies</a></li>
+          <li><a href="about/finance/transparency/evaluation.html">Evaluation Office</a></li>
+          <li><a href="contact/faq.html">Contact Us</a></li>
+        </ul>
+      </li>
+      <li><a href="careers.html">Careers</a></li>
+      <li>
+        <a href="where-we-work.html">Where we work</a>
+        <ul>
+          <li><a href="where-we-work/east-southern-africa.html">Africa</a></li>
+          <li><a href="where-we-work/asia-pacific.html">Asia and the Pacific</a></li>
+          <li><a href="where-we-work/near-east-north-africa.html">Europe</a></li>
+          <li><a href="where-we-work/latin-america.html">Latin America and the Caribbean</a></li>
+          <li><a href="about/people/organigram/worldwide-offices.html">New York Office</a></li>
+          <li><a href="where-we-work/near-east-north-africa.html">North America</a></li>
+          <li><a href="where-we-work/near-east-north-africa.html">West Asia</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="transparency/evaluation.html">Transparency</a>
+        <ul>
+          <li><a href="transparency/ethics.html">Ethics</a></li>
+          <li><a href="transparency/audit-oversight.html">Audit Oversight</a></li>
+          <li><a href="transparency/climate-assessment.html">Climate Assessment</a></li>
+          <li><a href="transparency/procurement.html">Procurement</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="how-we-work/people-centred.html">How we work</a>
+        <ul>
+          <li><a href="how-we-work/people-centred.html">Ethics</a></li>
+          <li><a href="how-we-work/compliance.html">Compliance with ISO standards</a></li>
+          <li><a href="how-we-work/quality.html">Quality Management Systems</a></li>
+          <li><a href="how-we-work/iso.html">ISO Standards</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="areas-of-work/evaluation.html">Areas of work</a>
+        <ul>
+          <li><a href="areas-of-work/climate-action/cities.html">Climate action</a></li>
+          <li><a href="areas-of-work/nature/biodiversity.html">Nature and land action</a></li>
+          <li><a href="areas-of-work/nature/water.html">Chemicals and pollution action</a></li>
+          <li><a href="areas-of-work/nature/water.html">Air quality</a></li>
+          <li><a href="areas-of-work/nature/biodiversity.html">Biosafety</a></
+          <li><a href="areas-of-work/climate-action/digital.html">Digital Transformations</a></li>
+          <li><a href="areas-of-work/climate-action/disasters.html">Disasters and conflicts</a></li>
+          <li><a href="areas-of-work/climate-action/energy.html">Energy</a></li>
+          <li><a href="transparency/climate-assessment.html">Environment under review</a></li>
+          <li><a href="areas-of-work/climate-action/law-governance.html">Environmental law and governance</a></li>
+          <li><a href="areas-of-work/climate-action/extractives.html">Extractives</a></li>
       </ul>
     </li>
 
@@ -223,9 +237,8 @@ nav a.nav-btn.red:hover {
 <!-- Main Content -->
 <section class="main-content">
   <main>
-    <h2>Welcome to our portal</h2>
-    <p>
-      Explore how monitoring and advisory experiences support leaders in contributing to change at the individual, institutional, community, and systems levels, and discover which methods and approaches most effectively enable that impact.
+    <h2>Join us in shaping the future</h2>
+    <p>We strive to become the development partner of choice for you, inspired by democratic principles, helping transform the landscape of comprehensive human development and preserve human dignity.
     </p>
   </main>
 </section>
