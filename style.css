@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AdanelaMusaraj.eu — Climate Action page redesign
+   Advisory&Monitoring
    Typography: Poppins (headings) + Lato (body)
    Palette: white / blue / red primaries, muted gray + pastel-blue + coral accents
    ========================================================================== */
@@ -647,3 +647,7 @@ a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+html {
+  scroll-behavior: smooth;
+}
+
