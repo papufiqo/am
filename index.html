@@ -60,85 +60,106 @@ body::before {
       margin:1rem auto 2rem;
     }
 
-    /* Navigation Bar */
-    nav {
-      background:#003366;
-    }
-    nav ul {
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      gap:2rem;
-      margin:0;
-      padding:1rem;
-    }
-    nav li { position:relative; }
-    nav a {
-      color:white;
-      text-decoration:none;
-      font-weight:600;
-      font-size:1rem;
-      padding:0.6rem 1rem;
-      border-radius:4px;
-    }
-    nav a:hover { color:#cc0000; }
-    nav ul ul {
-      display:none;
-      position:absolute;
-      top:100%;
-      left:0;
-      background:white;
-      padding:0.5rem 0;
-      min-width:200px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    }
-    nav ul ul a { color:#003366; padding:0.5rem 1rem; display:block; }
-    nav ul ul a:hover { color:#cc0000; }
-    nav li:hover > ul { display:block; }
+   /* Navigation Bar */
+nav {
+  background:#003366;
+}
+nav ul {
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  margin:0;
+  padding:1rem;
+}
+nav li { position:relative; }
+nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  font-size:1rem;
+  padding:0.6rem 1rem;
+  border-radius:4px;
+  display:inline-block;
+  transition: all 0.3s ease; /* smooth hover */
+}
+nav a:hover {
+  color:#cc0000;
+}
 
-    /* Red buttons inside nav */
-    nav a.nav-btn.red {
-      background:#cc0000;
-      color:white;
-    }
-    nav a.nav-btn.red:hover {
-      background:#990000;
-    }
+/* Dropdown menus */
+nav ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:white;
+  padding:0.5rem 0;
+  min-width:200px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+nav ul ul a {
+  color:#003366;
+  padding:0.5rem 1rem;
+  display:block;
+}
+nav ul ul a:hover {
+  color:#cc0000;
+}
+nav li:hover > ul {
+  display:block;
+}
 
-    /* Main Content */
-    .main-content {
-      max-width:900px;
-      margin:0 auto;
-      text-align:center;
-      padding:3rem 1rem;
-    }
-    .main-content h2 {
-      font-size:2.5rem;
-      margin-bottom:1rem;
-    }
-    .main-content p {
-      font-size:1.3rem;
-      text-align:justify;
-      max-width:800px;
-      margin:0 auto 2rem;
-    }
+/* Red buttons inside nav */
+nav a.nav-btn.red {
+  background:#cc0000;
+  color:white;
+}
+nav a.nav-btn.red:hover {
+  background:#990000;
+  color:white; /* keep text visible */
+}
 
-    /* Footer */
-    footer {
-      background:#003366;
-      color:white;
-      text-align:center;
-      padding:1rem;
-      margin-top:3rem;
-    }
+/* Main Content */
+.main-content {
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+  padding:3rem 1rem;
+}
+.main-content h2 {
+  font-size:2.5rem;
+  margin-bottom:1rem;
+}
+.main-content p {
+  font-size:1.3rem;
+  text-align:justify;
+  max-width:800px;
+  margin:0 auto 2rem;
+}
 
-    /* Mobile */
-    @media(max-width:768px){
-      nav ul { flex-direction:column; align-items:center; }
-      .hero h2 { font-size:2rem; }
-      .hero p { font-size:1rem; }
-    }
-  </style>
+/* Footer */
+footer {
+  background:#003366;
+  color:white;
+  text-align:center;
+  padding:1rem;
+  margin-top:3rem;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  nav ul {
+    flex-direction:column;
+    align-items:center;
+  }
+  nav a {
+    width:100%; /* buttons stretch full width for neat stacking */
+    text-align:center;
+  }
+  .hero h2 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+}
 </head>
 <body>
 
@@ -156,76 +177,75 @@ body::before {
     </p>
   </section>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <!-- Red button first -->
-      <li><a href="about/vision.html" class="nav-btn red">Discover More</a></li>
+ <!-- Navigation -->
+<nav>
+  <ul>
+    <!-- Red button first -->
+    <li><a href="about/vision.html" class="nav-btn red">Discover More</a></li>
 
-      <!-- Blue nav links -->
-      <li><a href="blog.html">Blog</a></li>
-      <li>
-        <a href="about/vision.html">About</a>
-        <ul>
-          <li><a href="about/vision.html">About Us</a></li>
-          <li><a href="about/people/leadership.html">Structure and leadership</a></li>
-          <li><a href="about/people/organigram/organizational-chart.html">Environment Assembly</a></li>
-          <li><a href="about/partners.html">Committee of Permanent Representatives</a></li>
-          <li><a href="about/partners.html">Secretariats and Conventions</a></li>
-          <li><a href="about/finance.html">Funding and partnerships</a></li>
-          <li><a href="about/finance/transparency/procurement.html">Policies and strategies</a></li>
-          <li><a href="about/finance/transparency/evaluation.html">Evaluation Office</a></li>
-          <li><a href="contact/faq.html">Contact Us</a></li>
-        </ul>
-      </li>
-      <li><a href="careers.html">Careers</a></li>
-      <li>
-        <a href="where-we-work.html">Where we work</a>
-        <ul>
-          <li><a href="where-we-work/east-southern-africa.html">Africa</a></li>
-          <li><a href="where-we-work/asia-pacific.html">Asia and the Pacific</a></li>
-          <li><a href="where-we-work/near-east-north-africa.html">Europe</a></li>
-          <li><a href="where-we-work/latin-america.html">Latin America and the Caribbean</a></li>
-          <li><a href="about/people/organigram/worldwide-offices.html">New York Office</a></li>
-          <li><a href="where-we-work/near-east-north-africa.html">North America</a></li>
-          <li><a href="where-we-work/near-east-north-africa.html">West Asia</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="transparency/evaluation.html">Transparency</a>
-        <ul>
-          <li><a href="transparency/ethics.html">Ethics</a></li>
-          <li><a href="transparency/audit-oversight.html">Audit Oversight</a></li>
-          <li><a href="transparency/climate-assessment.html">Climate Assessment</a></li>
-          <li><a href="transparency/procurement.html">Procurement</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="how-we-work/people-centred.html">How we work</a>
-        <ul>
-          <li><a href="how-we-work/people-centred.html">Ethics</a></li>
-          <li><a href="how-we-work/compliance.html">Compliance with ISO standards</a></li>
-          <li><a href="how-we-work/quality.html">Quality Management Systems</a></li>
-          <li><a href="how-we-work/iso.html">ISO Standards</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="areas-of-work/evaluation.html">Areas of work</a>
-        <ul>
-          <li><a href="areas-of-work/climate-action/cities.html">Climate action</a></li>
-          <li><a href="areas-of-work/nature/biodiversity.html">Nature and land action</a></li>
-          <li><a href="areas-of-work/nature/water.html">Chemicals and pollution action</a></li>
-          <li><a href="areas-of-work/nature/water.html">Air quality</a></li>
-          <li><a href="areas-of-work/nature/biodiversity.html">Biosafety</a></
-          <li><a href="areas-of-work/climate-action/digital.html">Digital Transformations</a></li>
-          <li><a href="areas-of-work/climate-action/disasters.html">Disasters and conflicts</a></li>
-          <li><a href="areas-of-work/climate-action/energy.html">Energy</a></li>
-          <li><a href="transparency/climate-assessment.html">Environment under review</a></li>
-          <li><a href="areas-of-work/climate-action/law-governance.html">Environmental law and governance</a></li>
-          <li><a href="areas-of-work/climate-action/extractives.html">Extractives</a></li>
+    <!-- Blue nav links -->
+    <li><a href="blog.html">Blog</a></li>
+    <li>
+      <a href="about/vision.html">About</a>
+      <ul>
+        <li><a href="about/vision.html">About Us</a></li>
+        <li><a href="about/people/leadership.html">Structure and leadership</a></li>
+        <li><a href="about/people/organigram/organizational-chart.html">Environment Assembly</a></li>
+        <li><a href="about/partners.html">Committee of Permanent Representatives</a></li>
+        <li><a href="about/partners.html">Secretariats and Conventions</a></li>
+        <li><a href="about/finance.html">Funding and partnerships</a></li>
+        <li><a href="about/finance/transparency/procurement.html">Policies and strategies</a></li>
+        <li><a href="about/finance/transparency/evaluation.html">Evaluation Office</a></li>
+        <li><a href="contact/faq.html">Contact Us</a></li>
       </ul>
     </li>
-
+    <li><a href="careers.html">Careers</a></li>
+    <li>
+      <a href="where-we-work.html">Where we work</a>
+      <ul>
+        <li><a href="where-we-work/east-southern-africa.html">Africa</a></li>
+        <li><a href="where-we-work/asia-pacific.html">Asia and the Pacific</a></li>
+        <li><a href="where-we-work/near-east-north-africa.html">Europe</a></li>
+        <li><a href="where-we-work/latin-america.html">Latin America and the Caribbean</a></li>
+        <li><a href="about/people/organigram/worldwide-offices.html">New York Office</a></li>
+        <li><a href="where-we-work/near-east-north-africa.html">North America</a></li>
+        <li><a href="where-we-work/near-east-north-africa.html">West Asia</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="transparency/evaluation.html">Transparency</a>
+      <ul>
+        <li><a href="transparency/ethics.html">Ethics</a></li>
+        <li><a href="transparency/audit-oversight.html">Audit Oversight</a></li>
+        <li><a href="transparency/climate-assessment.html">Climate Assessment</a></li>
+        <li><a href="transparency/procurement.html">Procurement</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="how-we-work/people-centred.html">How we work</a>
+      <ul>
+        <li><a href="how-we-work/people-centred.html">Ethics</a></li>
+        <li><a href="how-we-work/compliance.html">Compliance with ISO standards</a></li>
+        <li><a href="how-we-work/quality.html">Quality Management Systems</a></li>
+        <li><a href="how-we-work/iso.html">ISO Standards</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="areas-of-work/evaluation.html">Areas of work</a>
+      <ul>
+        <li><a href="areas-of-work/climate-action/cities.html">Climate action</a></li>
+        <li><a href="areas-of-work/nature/biodiversity.html">Nature and land action</a></li>
+        <li><a href="areas-of-work/nature/water.html">Chemicals and pollution action</a></li>
+        <li><a href="areas-of-work/nature/water.html">Air quality</a></li>
+        <li><a href="areas-of-work/nature/biodiversity.html">Biosafety</a></li>
+        <li><a href="areas-of-work/climate-action/digital.html">Digital Transformations</a></li>
+        <li><a href="areas-of-work/climate-action/disasters.html">Disasters and conflicts</a></li>
+        <li><a href="areas-of-work/climate-action/energy.html">Energy</a></li>
+        <li><a href="transparency/climate-assessment.html">Environment under review</a></li>
+        <li><a href="areas-of-work/climate-action/law-governance.html">Environmental law and governance</a></li>
+        <li><a href="areas-of-work/climate-action/extractives.html">Extractives</a></li>
+      </ul>
+    </li>
     <!-- Red button last -->
     <li><a href="contact/faq.html" class="nav-btn red">Get in Touch</a></li>
   </ul>
